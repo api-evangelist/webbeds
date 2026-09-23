@@ -1,0 +1,95 @@
+generated: '2026-09-23'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 7
+  own: 6
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - identity
+  - other
+  - source
+  - website
+hosts:
+- host: api.webbeds.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: webbeds.com
+  role: api
+  relation: own
+- host: book.webbeds.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: webbeds.com
+  role: other
+  relation: own
+- host: central.webbeds.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: webbeds.com
+  role: other
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: pm.webbeds.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: webbeds.com
+  role: other
+  relation: own
+- host: webbeds.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudfront
+  registrable_domain: webbeds.com
+  role: website
+  relation: own
+- host: www.webbeds.com
+  found_by:
+  - pointer
+  types:
+  - TermsOfService
+  - Support
+  - PrivacyPolicy
+  - Newsroom
+  - Login
+  - Leadership
+  serves: []
+  registrable_domain: webbeds.com
+  role: identity
+  relation: own
